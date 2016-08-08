@@ -1,0 +1,119 @@
+/* CSS Document 
+	Styles shared by external and internal
+*/
+
+body
+{
+	margin: 0px;
+	padding: 0px;
+	background-color: #dee4f2;
+	font-family: Arial, sans-serif;
+	/*background:url(../images/background_gradient.gif);
+	background-repeat: repeat;
+	background-position:center;*/
+}
+
+
+#master_splash_container, #master_container
+{
+	border: 2px solid #5575b7;
+	border-radius: 50px;
+	background-color: white;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	/*background-image:url(../images/thatched_background.jpg);
+	background-repeat:repeat;*/
+}
+
+#master_container
+{
+	
+	width: 1182px;
+	
+}
+
+#master_splash_container
+{
+	width: 500px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color: #809fdf;
+}
+
+h1
+{
+	font-size:14pt;
+	color: #506cdc;
+}
+
+#navigation li#toggle_button
+{
+	display: none;
+	float: right;
+	width: auto;
+}
+
+#navigation li.menu_category_header
+	{
+		
+		display: inline-block;
+	}
+
+@media screen and (max-width: 1200px) {
+	#master_container
+	{
+		width: 100%;
+		position: relative;
+		top: 0px;
+		left: 0px;
+		margin-left: 0px;
+		margin-top: 0px;
+	}
+	
+	
+		
+	#main_logo
+	{
+		/*width: 100%;*/
+		
+	}
+	
+	#main_logo img 
+	{
+		float: left;
+	}
+	
+	#navigation li#toggle_button
+	{
+		display: block;
+	}
+}
+
+
+@media screen and (max-width: 360px) {
+	#master_splash_container
+	{
+		width: 100%;
+		
+	}
+	
+	#grow_log
+	{
+		width: 95%;
+	}
+	
+}
+
+@media screen and (max-width: 320px) {
+	#master_splash_container
+	{
+		width: 100%;
+		
+	}
+	
+	#grow_log
+	{
+		width: 95%;
+	}
+	
+}

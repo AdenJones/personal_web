@@ -1,0 +1,428 @@
+/* CSS Document */
+
+
+div.centered_form, div.generic_form
+{
+	border: 2px solid #fadca2;
+	border-radius: 20px;
+	background-color: white;
+	padding: 7px;
+}
+
+.ui-tabs .ui-tabs-nav a
+{
+   background-color: transparent;
+}
+
+div.generic_form
+{
+	
+	width: 830px;
+	margin-right:auto;
+	margin-left: auto;
+}
+
+div.centered_form
+{
+	margin-right:auto;
+	margin-left: auto;
+	width: 500px;
+}
+
+div.extra_wide_form
+{
+	border: 2px solid #fadca2;
+	border-radius: 20px;
+	background-color: #ffcda5;
+	padding: 7px;
+	width: 400px;
+	margin-right:auto;
+	margin-left: auto;
+}
+
+textarea
+{
+	font-family: Calibri, Arial, sans-serif;
+	border: 1px solid #2d4194;
+	border-radius: 20px;
+	background-color: white;
+	padding: 12px;
+}
+
+div.form_heading
+{
+	text-align:left;
+}
+
+div.form_major_heading
+{
+	text-align:center;
+	margin-bottom: 8px;
+	/*
+	background-color:white;
+	border: 1px solid #2d4194;
+	padding: 5px;
+	border-radius: 20px;
+	margin-bottom: 10px;*/
+	
+}
+
+div.form_major_heading h1
+{
+	border: 2px solid #3f5c9b;
+	background-color: #fadca2;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 20px;
+	margin: 0px;
+	/*background:url(../images/background_gradient.gif);
+	background-repeat: repeat;
+	background-position:center;*/
+	color: #3f5c9b;
+}
+
+label, span.label
+{
+	font-weight: bold;
+}
+
+label.textarea
+{
+	display: block;
+}
+
+[type=text],[type=password]
+{
+	border: 1px solid #2d4194;
+	border-radius: 20px;
+	padding: 4px;
+	padding-left: 6px;
+	
+}
+
+select
+{
+	border: 1px solid #2d4194;
+	border-radius: 20px;
+	/*padding: 4px;*/
+	padding-left: 6px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+div.form_item
+{
+	display: inline-block;
+}
+
+div.form_item_block
+{
+	display: block;
+	font-weight: bold;
+}
+
+div.with_links
+{
+	margin-top: 7px;
+}
+
+div.padded
+{
+	padding: 2px;
+}
+
+div.form_item_major_block
+{
+	display: block;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border: 2px solid white;
+	border-radius: 20px;
+	padding-left: 10px;
+	background-color: #d3ddea;
+}
+
+div.general_highlight_good
+{
+	background-color: #e9ead3;
+}
+
+div.general_highlight_bad
+{
+	background-color: #ead3d3;
+}
+
+div.aligned_dates
+{
+	width: 140px;
+	padding-top: 5px;
+	margin-right: 18px;
+	margin-left: 18px;
+}
+
+div.column
+{
+	display:inline-block;
+	width: 32%;
+	vertical-align:text-top;
+	
+}
+
+div.column > div.form_item
+{
+	padding-top: 5px;
+}
+
+div.column a
+{
+	min-width: 140px;
+}
+
+div.extra_padding
+{
+	padding: 10px;
+}
+
+div.form_control
+{
+	position:relative;
+}
+
+div.form_popup
+{
+	position:absolute;
+	left: 415px;
+	top: 0px;
+	background-color:white;
+	visibility:hidden;
+	z-index:50;
+	border: 1px solid #2d4194;
+	border-radius: 20px;
+	padding: 10px;
+	
+}
+
+
+
+div.button_right
+{
+	text-align:right;
+}
+
+div.block_with_close
+{
+	width: 400px;
+	font-weight: bold;
+}
+
+img.image_right
+{
+	display:inline-block;
+	float:right;
+	margin-top: 3px;
+	margin-left: 10px;
+}
+
+div.parent_confirm_or_cancel
+{
+	position: relative;
+	
+}
+
+div.confirm_or_cancel
+{
+	color: black;
+	font-weight: bold;
+	text-align: center;
+	position: absolute;
+	background-color:white;
+	z-index:50;
+	border: 1px solid #2d4194;
+	border-radius: 20px;
+	padding: 10px;
+	width: 230px;
+	left: -100px;
+}
+
+.float_right
+{
+	float:right;
+}
+
+.generic_close
+{
+	margin-right: 10px;
+}
+
+div.right
+{
+	display: inline-block;
+	float:right;
+}
+
+div.form_inner_popup
+{
+	position: absolute;
+	background-color:white;
+	visibility:hidden;
+	z-index:50;
+	border: 1px solid #2d4194;
+	border-radius: 20px;
+	padding: 10px;
+	right: 0px;
+	min-width: 290px;
+}
+
+div.form_member_select
+{
+	position: relative;
+}
+
+div.form_facilitators
+{
+	
+}
+
+div.spaced
+{
+	margin-right: 20px;
+}
+
+div.form_item_container
+{
+	width: 100%;
+}
+
+div.form_item_left
+{
+	float: left;
+
+}
+
+div.form_item_right
+{
+	float:right;
+}
+
+div.form_row_with_borders:first-child
+{
+	border-top: 1px solid white;
+}
+
+div.form_row_with_borders
+{
+	
+	border-bottom: 1px solid white;
+	min-height: 22px;
+	padding: 4px;
+}
+
+input.button
+{
+	text-align:center;
+}
+
+div.form_password
+{
+	display: block;
+}
+
+div.form_submit
+{
+	text-align: right;
+	margin-top: 10px;
+}
+
+/* styles just for splash submit button */
+div.splash
+{
+	text-align: left;
+	width: 500px;
+	margin-left: 216px;
+}
+
+div.change_password_container
+{
+	
+	max-width: 550px;
+	text-align: right;
+}
+
+div.username_container
+{
+	max-width: 280px;
+	text-align: right;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+div.relative_userpassword_container
+{
+	display: block;
+	width: 100%;
+	
+}
+
+div.floating_password_container_block
+{
+	
+	color: black;
+	background-color:#ffc4c4;
+	padding-top: 14px;
+	padding-bottom:13px;
+	text-align:center;
+	margin-top: 2px;
+	border: 1px solid white;
+	border-radius: 20px;
+	margin-bottom: 10px;
+}
+
+div.inner_passwords_container, div.inner_username_container
+{
+	display:inline-block;
+}
+
+div.passwords_message
+{
+	min-width: 170px;
+	float: right;
+}
+
+
+div.change_password_container_block
+{
+	color: black;
+	background-color:#ffc4c4;
+	padding-top: 14px;
+	padding-bottom:13px;
+	text-align:center;
+	margin-top: 2px;
+	border: 1px solid white;
+	border-radius: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+	div.generic_form
+	{
+		clear: both;
+		
+		width: 80%;
+		/*min-width: 200px;*/
+		padding: 0px;
+	}
+}
+
+
+@media screen and (max-width: 360px) {
+	
+	div.extra_wide_form
+	{
+		width: 290px;
+	}
+}
+@media screen and (max-width: 320px) {
+	div.extra_wide_form
+	{
+		width: 290px;
+	}
+}

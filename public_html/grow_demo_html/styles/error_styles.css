@@ -1,0 +1,53 @@
+/* CSS Document */
+
+/* Full page error messages */
+div.criticial_error_message
+{
+	width: 60%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14pt;
+	background-color: rgba(233,134,134,0.5);
+	/*padding: 50px;*/
+	padding-top: 50px;
+	padding-bottom: 50px;
+	border: 2px solid white;
+	border-radius: 20px;
+	width: 650px;
+	margin-right:auto;
+	margin-left: auto;
+	
+}
+
+/* End Full page error messages */
+
+img.form_error_message
+{
+	width: 23px;
+	height: 23px;
+	vertical-align:middle;
+}
+
+.highlight_error 
+{
+	border: 2px inset #ffc4c4;
+	background-color: #ffc4c4;
+}
+
+div.popup_error
+{
+	position: absolute;
+	z-index: 5;
+	background-color: rgba(233,134,134,0.75);
+	border: 2px solid white;
+	border-radius: 20px;
+	padding: 10px;
+	font-weight: bold;
+	width: 200px;
+}
+
+
+div.highlight_blk_error
+{
+	background-color: rgba(233,134,134,0.5);
+}

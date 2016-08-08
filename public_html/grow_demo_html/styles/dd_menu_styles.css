@@ -1,0 +1,364 @@
+/* Pure CSS Drop down menu     */
+/* Author: Anthony Knox (Aden) */
+/* SNo: N8087636               */
+/* For: INB271 Ass: 2          */
+
+
+.menu
+{
+	padding-left:5px;
+	padding-right:5px;
+	background-color: #809fdf;
+}
+
+/* Master navigation container */
+#navigation
+{
+	font-size:1em;
+	
+}
+
+/* Overriding default margins and padding of ul */
+#navigation ul 
+{
+	margin:0; 
+	padding:0;
+}
+
+/* Overriding default li styles */
+#navigation li 
+{
+	list-style: none;
+	display: inline-block;
+}
+
+/* Chose to apply no styles here in deference to
+   online guide as width setting limited width of
+   sub menus */
+ul.top-level 
+{
+	background-color:transparent;
+	/*background:#3037c9;*/
+}
+
+ul.top-level li 
+{
+	
+	width: 180px;
+	background-color:transparent;
+	
+	
+}
+
+/* Master styles for all navigation links */
+.menu_category_header a , .menu_header_small a
+{
+	color: #abaef3;
+	cursor: pointer;
+	display:block;
+	min-height: 30px;
+	line-height: 30px;
+	text-decoration:none;
+	width:100%;
+	font-weight: bold;
+	font-size:12pt;
+	background-color: rgba(80,108,220,0.8);
+	border: 2px solid #fadca2;
+	border-radius: 20px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom: none;
+	padding: 0px;
+	
+}
+
+.menu_header_small
+{
+	display: none;
+}
+
+.menu_category_header a:hover, .sub_menu_category_item:first-child a.sub_sub:hover
+{
+	color: #fadca2;
+	background: #abaef3;
+	border: 2px solid #fadca2;
+	border-bottom: none;
+}
+
+.menu_category_item a
+{
+	color: #abaef3;
+	cursor: pointer;
+	display:block;
+	min-height: 30px;
+	line-height: 30px;
+	text-decoration:none;
+	width:100%;
+	font-weight: bold;
+	font-size:12pt;
+	background-color: rgba(80,108,220,0.8);
+	border-top: 1px solid #fadca2;
+	border-radius: 0px;
+	padding: 0px;
+	
+}
+
+.menu_category_item:last-child a, .sub_menu_category_item:last-child a 
+{
+	color: #abaef3;
+	cursor: pointer;
+	display:block;
+	min-height: 30px;
+	line-height: 30px;
+	text-decoration:none;
+	width:100%;
+	font-weight: bold;
+	font-size:12pt;
+	background-color: rgba(80,108,220,0.8);
+	border: 2px solid #fadca2;
+	border-radius: 20px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-top: 1px solid #fadca2;
+	padding: 0px;
+	
+}
+
+.sub_menu_category_item:first-child a.sub_sub
+{
+	color: #abaef3;
+	cursor: pointer;
+	display:block;
+	min-height: 30px;
+	line-height: 30px;
+	text-decoration:none;
+	width:100%;
+	font-weight: bold;
+	font-size:12pt;
+	background-color: rgba(80,108,220,0.8);
+	border: 2px solid #fadca2;
+	border-radius: 20px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-top-left-radius: 0px;
+	border-bottom: none;
+	border-left: none;
+	padding: 0px;
+}
+
+.sub_menu_category_item a.sub_sub
+{
+	color: #abaef3;
+	cursor: pointer;
+	display:block;
+	min-height: 30px;
+	line-height: 30px;
+	text-decoration:none;
+	width:100%;
+	font-weight: bold;
+	font-size:12pt;
+	background-color: rgba(80,108,220,0.8);
+	border-top: 1px solid #fadca2;
+	border-radius: 0px;
+	padding: 0px;
+	border-bottom: none;
+}
+
+.sub_menu_category_item:last-child a.sub_sub 
+{
+	color: #abaef3;
+	cursor: pointer;
+	display:block;
+	min-height: 30px;
+	line-height: 30px;
+	text-decoration:none;
+	width:100%;
+	font-weight: bold;
+	font-size:12pt;
+	background-color: rgba(80,108,220,0.8);
+	border: 2px solid #fadca2;
+	border-radius: 20px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-top: 1px solid #fadca2;
+	padding: 0px;
+	
+}
+
+/* Master styles for all navigation links
+   on hover */
+.menu_category_item a:hover
+{
+	color: #fadca2 !important;
+	background: #abaef3 !important;
+	border: 1px solid #fadca2 !important;
+	border-bottom: none !important;
+}
+
+.menu_header_small a:hover
+{
+	color: #fadca2 !important;
+	background: #abaef3 !important;
+}
+
+/* Using relative positioning here so that
+   absolutely positioned sub menus are 
+   relative to containers. */
+#navigation li:hover 
+{
+	position: relative;
+}
+
+/* Hiding sub-levels until hovered over */
+ul.sub-level , ul.sub-sub-level
+{
+    display: none;
+}
+
+/* Making sub-levels visible on hover
+   and relative to containing li */
+.menu_category_header:hover ul.sub-level 
+{
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 32px;
+	z-index: 500;
+}
+
+.menu_category_header:hover ul.sub-sub-level
+{
+    display: none;
+}
+
+.menu_category_item:hover ul.sub-sub-level
+{
+	display: block;
+    position: absolute;
+    left: 170px;
+    top: 0px;
+	z-index: 501;
+}
+
+#main_logo
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+#main_logo a 
+{
+	color: transparent;
+	cursor: pointer;
+	display:block;
+	height: 30px;
+	line-height: 30px;
+	text-decoration:none;
+	width:100%;
+	font-weight: bold;
+	font-size:12pt;
+	background-color: transparent;
+	border: none;
+	padding: 0px;
+	
+}
+
+
+
+
+#main_logo a:hover
+{
+	color: white;
+	background: transparent;
+	border: none;
+}
+
+@media screen and (max-width: 1200px) {
+	
+	#navigation ul.sub_sub_small
+	{
+		display: none;
+	}
+	
+	#navigation ul.sub_sub_small a.sub_sub
+	{
+		color: #5a76dd;
+		cursor: pointer;
+		display:block;
+		min-height: 30px;
+		line-height: 30px;
+		text-decoration:none;
+		width:100%;
+		font-weight: bold;
+		font-size:13px;
+		background-color: #aebbea;
+		border: 1px solid #fadca2;
+		border-style: none solid solid;
+		border-radius: 0px;
+		padding: 0px;
+		border-top: none;
+	}
+	
+	.menu_category_item a:hover
+	{
+		color: #fadca2 !important;
+		background: #abaef3 !important;
+		border: 1px solid #fadca2 !important;
+		
+	}
+	
+	#navigation li.menu_header_small
+	{
+		width: 100%;
+		display: none;
+	}
+	
+	#navigation li.sub_menu_category_item
+	{
+		width: 100%;
+	}
+	
+	li.menu_header_small:last-child a
+	{
+		border-radius: 0 0 20px 20px;
+		border-style: none solid solid;	
+	}
+	
+	li.menu_header_small.first a
+	{
+		border-radius: 20px 20px 0 0;
+		border-style: solid solid solid;	
+		
+	}
+	
+	.menu_header_small ul.sub-level a
+	{
+		border-radius: 0;
+		border-style: none solid solid;	
+		font-size: 14px;
+		background-color: #8499e9;
+		color: #5a76dd;
+		border-bottom: 1px solid #5a76dd;
+	}
+	
+	
+	li.menu_header_small a
+	{
+		border-radius: 0;
+		border-style: none solid solid;
+		border-bottom: 1px solid #8499e9;
+	}
+	
+	
+	
+	#navigation li#toggle_button
+	{
+		display: block;
+	}
+	
+	ul.sub-level > li.menu_category_item
+	{
+		display: block;
+		width: 100%;
+	}
+}

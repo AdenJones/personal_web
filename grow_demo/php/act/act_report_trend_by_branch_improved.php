@@ -1,0 +1,81 @@
+<?php
+	$arrErrors = array();
+	
+	$intSubmitted = funRqScpVar('form_submitted','');
+	
+	$this_year = date('Y');
+	$bdYRange = ($this_year-120).':'.$this_year;
+	
+	$StartDate = funRqScpVar('StartDate','');
+	$EndDate = funRqScpVar('EndDate','');
+	
+	$Branch = funRqScpVar('Branch','');
+	
+	if( $_SESSION['User']->GetUserTypeName() == $StateUser )
+	{
+		$UserStaff = Membership\Staff::LoadStaff($_SESSION['User']->GetUserID());
+		
+		$arr_branches = get_branches_state_user($_SESSION['User']->GetUserID())->fetchAll();
+	} else {
+		
+		$arr_branches = getBranches()->fetchAll();
+	}
+	
+	
+	
+	if($intSubmitted == 1)
+	{
+		//perform validation
+		$blnIsGood = true;
+		
+		Validation\CreateErrorMessage(Validation\ValidateDate($StartDate,true),'Start Date');
+		Validation\CreateErrorMessage(Validation\ValidateDate($EndDate,true),'End Date');
+		
+		if( $blnIsGood )
+		{
+			$str_safe_s_date = funSfDateStr($StartDate);
+			$str_safe_e_date = funSfDateStr($EndDate);
+			
+			Validation\CreateErrorMessage(Validation\ValidateDates($str_safe_s_date,$str_safe_e_date),'End Date');
+		}
+		
+		Validation\CreateErrorMessage(Validation\ValidateBranch($Branch),'Branch');
+		
+		if( $_SESSION['User']->GetUserTypeName() == $StateUser )
+		{
+			if( $UserStaff->GetBranchID() != $Branch )
+			{
+				//Validate Branch
+				Validation\CreateErrorMessage(' ID Bad!','Branch');
+			}
+		
+		}
+		
+		
+		if( $blnIsGood )
+		{
+			
+			$BranchObject = \Business\Branch::LoadBranch($Branch);
+			$ReportName = $BranchObject->GetBranchName().' Branch Report.';
+			
+			$Report = $_SESSION['User']->AddReport($page_name,$ReportName,funAusDateFormat($str_safe_s_date).' - '.funAusDateFormat($str_safe_e_date),$_SESSION['User']->GetUserID());
+			
+			$ReportID = $Report->GetIDUserReport();
+			
+			//include $BaseIncludeURL.'/async/async_trend_by_branch.php';;
+			
+			
+			$cmd = "php ../php/async/async_trend_by_branch.php ".$Branch." ".$StartDate." ".$EndDate." ".$ReportID." ".$_SESSION['User']->GetUserID();
+			
+			funExecPlatformIndependant($cmd);
+			
+			header( "Location: $lnk_view_my_reports" );
+			//ensure no further processing is performed
+			exit;
+			
+			
+		}
+		
+	}
+	
+?>

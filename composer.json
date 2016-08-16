@@ -23,7 +23,10 @@
         ],
         "psr-4": {
             "App\\": "app/"
-        }
+        },
+        "files": [
+            "app/Adens_Classes/Helpers.php"
+        ]
     },
     "autoload-dev": {
         "classmap": [

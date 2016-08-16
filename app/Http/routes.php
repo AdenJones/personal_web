@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('welcome', ['message' => 'No Message!']);
 });
 
+Route::get('/phpinfo', function(){
+ return View::make('phpnfo');
+});
+
 Route::get('/file_upload', function(){
  return View::make('file_uploads');
 });
@@ -46,6 +50,7 @@ Route::post('/projects', function (Request $request) {
         'name' => 'required|max:255',
 	     'description' => 'required|max:65000',
 	     'url' => 'required|max:255',
+        'slider_image' => 'required|mimes:jpeg,jpg,bmp,png,gif|max:200000',
     ]);
 
     if ($validator->fails()) {
@@ -58,8 +63,12 @@ Route::post('/projects', function (Request $request) {
     $project->name = $request->name;
     $project->description = $request->description;
     $project->url = $request->url;
-    $project->slider_image = Input::file('slider_image')->getClientOriginalName();
-    Input::file('slider_image')->move('/public_html/images');
+    
+    $unique_filename = Helpers::makeUniqueName(Input::file('slider_image')->getClientOriginalName(),public_path().'/images/');
+    
+    $project->slider_image = $unique_filename;
+    Input::file('slider_image')->move(public_path().'/images/',$unique_filename);
+    
     $project->save();
 
     return redirect('/view_projects');

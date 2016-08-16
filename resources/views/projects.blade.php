@@ -1,5 +1,5 @@
 <!-- resources/views/projects.blade.php -->
-{{ Form::model(array('route'=>array('projects'),'files'=>true)) }}
+
 @extends('layouts.app')
 
 @section('content')
@@ -11,7 +11,8 @@
         @include('common.errors')
 
         <!-- New Task Form -->
-        <form action="{{ url('projects') }}" method="POST" class="form-horizontal">
+         {{ Form::open(array('url'=>'projects','files'=>true)) }}
+        
             {{ csrf_field() }}
 
             <!-- Task Name -->
@@ -40,7 +41,7 @@
                     </button>
                 </div>
             </div>
-        </form>
+        {{ Form::close() }}
     </div>
 
     <!-- TODO: Current Tasks -->

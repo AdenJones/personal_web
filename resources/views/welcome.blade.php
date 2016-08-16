@@ -39,6 +39,7 @@
         <div class="container">
             <div class="content">
                 <div class="title">Laravel 5</div>
+		<div class="message"><?php echo $message; ?></div>
             </div>
         </div>
     </body>

@@ -29,10 +29,10 @@
                             <tr>
                                 <!-- Task Name -->
                                 <td class="table-text">
-                                    <div>{{ $project->name }}</div>
+                                    <div><a href="{{ url('projects/'.$project->id) }}">{{ $project->name }}</a></div>
                                 </td>
                                 <td class="table-text">
-                                    <div>{{ $project->description }}</div>
+                                    <div>{!! $project->description !!}</div>
                                 </td>
                                 <td class="table-text">
                                     <div>{{ $project->url }}</div>

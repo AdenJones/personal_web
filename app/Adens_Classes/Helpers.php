@@ -1,5 +1,6 @@
 <?php
  
+namespace App;
    
 class Helpers {
 
@@ -7,16 +8,15 @@ class Helpers {
    // for a file name and continue incrementing
    // counter until a unique name has been generated
    
-   public static function makeUniqueName($filename,$directory)
+   public static function makeUniqueName($file,$directory)
    {
-      $file_exists = true;
       $final_filename = '';
       
       $counter = 0;
       
-      while($file_exists)
+      while(true)
       {
-         $final_filename = $counter.$filename;
+         $final_filename = $counter.$file->getClientOriginalName();
          
          if(file_exists($directory.$final_filename))
          {

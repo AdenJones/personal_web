@@ -1,0 +1,38 @@
+/*style.css*/
+
+body
+{
+   background-color: #acb5ed;
+   
+}
+
+div.container
+{
+   background-color: #7582d2 ;
+   border-top-left-radius: 50px;
+   border-bottom-right-radius: 50px;
+   padding-top: 25px;
+   padding-bottom: 25px;
+   border: 5px outset #939ddc;
+}
+
+div.container > h1 a,
+div.container > h1 a:visited,
+div.container > h1 a:active
+{
+   color: white;
+}
+
+body, h1
+{
+
+   font-family: 'Prosto One', cursive;
+  
+}
+
+#body_container
+{
+   width: 1200px;
+}
+
+

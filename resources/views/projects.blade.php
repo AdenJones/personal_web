@@ -17,18 +17,18 @@
 
             <!-- Task Name -->
             <div class="form-group">
-                <label for="task" class="col-sm-3 control-label">Project</label>
+                <label for="task" class="col-sm-6 control-label">Project</label>
 
                 <div class="col-sm-6">
                    name: <input type="text" name="name" id="project-name" class="form-control">
                 </div>
-		<div class="col-sm-6">
+		         <div class="col-sm-6">
                    description: <textarea name="description" id="project-description" class="form-control" rows="4" cols="50"></textarea>
                 </div>
-		<div class="col-sm-6">
+		         <div class="col-sm-6">
                    url: <input type="text" name="url" id="project-url" class="form-control">
                 </div>
-		<div class="col-sm-6">
+		         <div class="col-sm-6">
                    slider image: <input type="file" name="slider_image" id="project-slider-image" class="form-control">
                 </div>
             </div>

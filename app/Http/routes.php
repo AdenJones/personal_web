@@ -16,7 +16,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
 Route::get('/', function () {
-    return view('welcome', ['message' => 'No Message!']);
+   
+    $projects = Project::orderBy('created_at', 'asc')->get();
+   
+    return view('welcome', ['projects' => $projects]);
 });
 
 Route::get('/phpinfo', function(){
@@ -45,34 +48,9 @@ Route::get('/projects', function () {
     return view('projects', ['message' => 'No Message!']);
 });
 
-Route::post('/projects', function (Request $request) {
-    $validator = Validator::make(Input::all(), [
-        'name' => 'required|max:255',
-	     'description' => 'required|max:65000',
-	     'url' => 'required|max:255',
-        'slider_image' => 'required|mimes:jpeg,jpg,bmp,png,gif|max:200000',
-    ]);
+Route::get('/tasks', 'TaskController@index');
 
-    if ($validator->fails()) {
-        return redirect('/projects')
-            ->withInput()
-            ->withErrors($validator);
-    }
-
-    $project = new Project;
-    $project->name = $request->name;
-    $project->description = $request->description;
-    $project->url = $request->url;
-    
-    $unique_filename = Helpers::makeUniqueName(Input::file('slider_image')->getClientOriginalName(),public_path().'/images/');
-    
-    $project->slider_image = $unique_filename;
-    Input::file('slider_image')->move(public_path().'/images/',$unique_filename);
-    
-    $project->save();
-
-    return redirect('/view_projects');
-});
+Route::post('/projects', 'ProjectController@create');
 
 Route::delete('/projects/{project}', function (Project $project) {
    $project->delete();

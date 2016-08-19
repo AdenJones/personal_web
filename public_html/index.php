@@ -1,6 +1,6 @@
 <?php
 
-/**
+/** Work by Aden
  * Laravel - A PHP Framework For Web Artisans
  *
  * @package  Laravel

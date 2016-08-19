@@ -60,7 +60,7 @@ class ProjectController extends Controller
           
           $project->save();
 
-          return redirect('/view_projects');
+          return redirect('/admin/view_projects');
     }
 
     /**

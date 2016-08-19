@@ -1,6 +1,6 @@
 <!-- resources/views/projects.blade.php -->
 
-@extends('layouts.main')
+@extends('layouts.app')
 
 @section('content')
 
@@ -11,7 +11,7 @@
         @include('common.errors')
 
         <!-- New Task Form -->
-         {{ Form::open(array('url'=>'projects','files'=>true)) }}
+         {{ Form::open(array('url'=>'/admin/projects','files'=>true)) }}
         
             {{ csrf_field() }}
 
@@ -37,7 +37,7 @@
             <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-6">
                     <button type="submit" class="btn btn-default">
-                        <i class="fa fa-plus"></i> Add Task
+                        <i class="fa fa-plus"></i> Add Project
                     </button>
                 </div>
             </div>

@@ -1,11 +1,11 @@
-@extends('layouts.main')
+@extends('layouts.app')
 
 @section('content')
     <!-- Create Task Form... -->
 
     <!-- Current Tasks -->
     @if (count($projects) > 0)
-    <h1>{{count($projects)}} Projects at this time! <a href="{{ url('/projects')}}">Add Project</a></h1>
+    <h3>{{count($projects)}} Projects at this time! <a href="{{ url('/admin/projects')}}">Add Project</a></h3>
         <div class="panel panel-default">
             <div class="panel-heading">
                 Current Projects
@@ -29,7 +29,7 @@
                             <tr>
                                 <!-- Task Name -->
                                 <td class="table-text">
-                                    <div><a href="{{ url('projects/'.$project->id) }}">{{ $project->name }}</a></div>
+                                    <div><a href="{{ url('/admin/projects/'.$project->id) }}">{{ $project->name }}</a></div>
                                 </td>
                                 <td class="table-text">
                                     <div>{!! $project->description !!}</div>
@@ -41,7 +41,7 @@
                                     <div>{{ $project->slider_image }}</div>
                                 </td>
                                  <td>
-                                    <form action="{{ url('projects/'.$project->id) }}" method="POST">
+                                    <form action="{{ url('/admin/projects/delete/'.$project->id) }}" method="POST">
 				                            {{ csrf_field() }}
 				                            {{ method_field('DELETE') }}
 

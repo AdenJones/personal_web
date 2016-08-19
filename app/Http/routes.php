@@ -15,6 +15,10 @@ use App\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+
 Route::get('/', function () {
    
     $projects = Project::orderBy('created_at', 'asc')->get();
@@ -22,44 +26,34 @@ Route::get('/', function () {
     return view('splash', ['projects' => $projects]);
 });
 
-Route::get('/phpinfo', function(){
- return View::make('phpnfo');
-});
 
-Route::get('/file_upload', function(){
- return View::make('file_uploads');
-});
-
-Route::any('form-submit', function(){
-   return Input::file('file')->move(public_path().'/images/',Input::file('file')->getClientOriginalName());
-//var_dump(Input::file('file'));
-});
-
-Route::get('/view_projects', function () {
+Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleWare'], function()
+{
     
-    $projects = Project::orderBy('created_at', 'asc')->get();
+    
+    Route::get('/admin/view_projects', function () {
+       
+       $projects = Project::orderBy('created_at', 'asc')->get();
 
-    return view('view_projects', [
-        'projects' => $projects
-    ]);
+       return view('view_projects', [
+           'projects' => $projects
+       ]);
+   });
+   
+   Route::get('/admin/projects', function () {
+      return view('projects', ['message' => 'No Message!']);
+   });
+
+   Route::post('/admin/projects', 'ProjectController@create');
+
+   Route::delete('/admin/projects/delete/{project}', function (Project $project) {
+      $project->delete();
+
+       return redirect('/admin/view_projects');
+   });
+
 });
 
-Route::get('/projects', function () {
-    return view('projects', ['message' => 'No Message!']);
-});
 
-Route::get('/tasks', 'TaskController@index');
-
-Route::post('/projects', 'ProjectController@create');
-
-Route::delete('/projects/{project}', function (Project $project) {
-   $project->delete();
-
-    return redirect('/view_projects');
-});
-
-Route::get('/{message}', function ($message) {
-    return view('splash', ['message' => $message]);
-});
 
 

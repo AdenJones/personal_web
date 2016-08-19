@@ -8,7 +8,9 @@
 </ul>
 <script type="text/javascript">
 $(document).ready(function(){
-  $('.bxslider').bxSlider();
+  $('.bxslider').bxSlider({
+   slideWidth: 1100
+  });
 });
 </script>
 @else

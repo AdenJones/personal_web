@@ -19,7 +19,7 @@ Route::get('/', function () {
    
     $projects = Project::orderBy('created_at', 'asc')->get();
    
-    return view('welcome', ['projects' => $projects]);
+    return view('splash', ['projects' => $projects]);
 });
 
 Route::get('/phpinfo', function(){
@@ -59,7 +59,7 @@ Route::delete('/projects/{project}', function (Project $project) {
 });
 
 Route::get('/{message}', function ($message) {
-    return view('welcome', ['message' => $message]);
+    return view('splash', ['message' => $message]);
 });
 
 

@@ -18,7 +18,15 @@
         <link rel="stylesheet" type="text/css" href="{{URL::to('/')}}/styles/style.css">
         <script src="{{URL::to('/')}}/js/modernizr-custom.js"></script>
         <script>
-        
+            $( document ).ready(function() {
+              if (!Modernizr.backgroundcliptext) {
+               
+                 // not supported
+                 $('div.container > h1 a').css('background','none');
+               } 
+            });
+            
+           
         </script>
     </head>
 

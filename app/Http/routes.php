@@ -45,7 +45,11 @@ Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleWare'], function()
    });
 
    Route::post('/admin/projects', 'ProjectController@create');
-
+   
+   Route::get('/admin/projects/{project}', ['uses' => 'ProjectController@edit' ]);
+   
+   Route::post('/admin/projects/{project}', ['uses' => 'ProjectController@update' ]);
+   
    Route::delete('/admin/projects/delete/{project}', function (Project $project) {
       $project->delete();
 
@@ -53,7 +57,3 @@ Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleWare'], function()
    });
 
 });
-
-
-
-

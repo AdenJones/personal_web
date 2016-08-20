@@ -52,4 +52,9 @@ body, h1
    width: 1200px;
 }
 
+@media screen and (max-width: 560px)
+{
+   h1 { font-size: 20px }
+}
+
 

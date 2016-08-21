@@ -20,6 +20,7 @@
                         <th>Description</th>
                         <th>URL</th>
                         <th>Image</th>
+                        <th>Image Small</th>
                         <th>Delete</th>
                     </thead>
 
@@ -39,6 +40,9 @@
                                 </td>
                                 <td class="table-text">
                                     <div>{{ $project->slider_image }}</div>
+                                </td>
+                                <td class="table-text">
+                                    <div>{{ $project->slider_image_small }}</div>
                                 </td>
                                  <td>
                                     <form action="{{ url('/admin/projects/delete/'.$project->id) }}" method="POST">

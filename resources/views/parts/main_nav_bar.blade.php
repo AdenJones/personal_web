@@ -2,14 +2,22 @@
 @if (count($projects) > 0)
 <ul class="bxslider">
    @foreach ($projects as $project)
-   <li><img src="{{url('/')}}/images/{{$project->slider_image}}" alt="{{$project->name}}" /></li>
+   <li>
+      <picture>
+      <source srcset="{{url('/')}}/images/{{$project->slider_image}}" media="(min-width: 560px)">
+      <img src="{{url('/')}}/images/{{$project->slider_image_small}}" alt="{{$project->name}}">
+      </picture>
+   </li>
    @endforeach
   
 </ul>
 <script type="text/javascript">
 $(document).ready(function(){
   $('.bxslider').bxSlider({
-   slideWidth: 1100
+   slideWidth: 1100,
+   auto: true,
+   autoStart: true,
+   autoDelay: 1000
   });
 });
 </script>

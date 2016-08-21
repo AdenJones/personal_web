@@ -32,7 +32,7 @@
                    slider image: <input type="file" name="slider_image" id="project-slider-image" class="form-control">
                 </div>
                 <div class="col-sm-6">
-                   slider image small: <input type="file" name="slider_image" id="project-slider-image" class="form-control">
+                   slider image small: <input type="file" name="slider_image_small" id="project-slider-image_small" class="form-control">
                 </div>
             </div>
 

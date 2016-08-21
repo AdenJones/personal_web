@@ -17,7 +17,8 @@ $(document).ready(function(){
    slideWidth: 1100,
    auto: true,
    autoStart: true,
-   autoDelay: 1000
+   autoDelay: 1000,
+   adaptiveHeight: true
   });
 });
 </script>

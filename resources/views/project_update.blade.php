@@ -28,11 +28,23 @@
 		         <div class="col-sm-6">
                    url: <input type="text" name="url" id="project-url" class="form-control" value="{{$project->url}}">
                 </div>
-		         <div class="col-sm-6">
+                
+                <div class="col-sm-6">
+                   <div class="col-sm-6">
+                     Current Slider Image: {{$project->slider_image}}
+                  </div>
+                  <div class="col-sm-6">
                    slider image: <input type="file" name="slider_image" id="project-slider-image" class="form-control">
+                  </div>
+                </div>
+		            
+		           <div class="col-sm-6">
+                 <div class="col-sm-6">
+                   Current Slider Image Small: {{$project->slider_image_small}}
                 </div>
                 <div class="col-sm-6">
                    slider image small: <input type="file" name="slider_image_small" id="project-slider-image_small" class="form-control">
+                </div>
                 </div>
             </div>
 

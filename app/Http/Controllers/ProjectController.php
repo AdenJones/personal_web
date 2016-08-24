@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Input;
 
 use Illuminate\Support\Facades\Validator;
 
+use File;
+
 class ProjectController extends Controller
 {
     /**
@@ -143,6 +145,13 @@ class ProjectController extends Controller
           
           if(!is_null(Input::file('slider_image')))
           {
+             //delete the old file
+             if( $project->slider_image != '' )
+             {
+               File::delete(public_path().'/images/'.$project->slider_image );
+             }
+             
+             //upload the new file and generate a unique file name
              $unique_filename = Helpers::makeUniqueName(Input::file('slider_image'),public_path().'/images/');
              $project->slider_image = $unique_filename;
              Input::file('slider_image')->move(public_path().'/images/',$unique_filename);
@@ -150,6 +159,13 @@ class ProjectController extends Controller
           
           if(!is_null(Input::file('slider_image_small')))
           {
+          
+               //delete the old file
+             if( $project->slider_image_small != '' )
+             {
+               File::delete(public_path().'/images/'.$project->slider_image_small );
+             }
+            
              $unique_filename_small = Helpers::makeUniqueName(Input::file('slider_image_small'),public_path().'/images/');
              $project->slider_image_small = $unique_filename_small;
              Input::file('slider_image_small')->move(public_path().'/images/',$unique_filename_small);

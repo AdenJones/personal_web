@@ -1,5 +1,5 @@
 	<table class="general" style="width:100%;">
-		<tr><th>Search Members <img onclick="jsHidePopUp(window.mem_sel_popup_container)" class="float_right generic_close" src="/images/white_close.gif"/></th></tr>
+		<tr><th>Search Members <img onclick="jsHidePopUp(window.mem_sel_popup_container)" class="float_right generic_close" src="/grow_demo_html/images/white_close.gif"/></th></tr>
 		
 <?php
 	

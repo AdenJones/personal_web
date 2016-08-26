@@ -3,32 +3,32 @@
     
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="/styles/shared_styles.css"/>
-    <link rel="stylesheet" type="text/css" href="/styles/general_styles.css"/>
-    <link rel="stylesheet" type="text/css" href="/styles/dd_menu_styles.css"/>
-    <link rel="stylesheet" type="text/css" href="/styles/form_styles.css"/>
-    <link rel="stylesheet" type="text/css" href="/styles/error_styles.css"/>
-    <link rel="stylesheet" type="text/css" href="/styles/bootstrap_stolen.css"/>
-    <link rel="stylesheet" type="text/css" href="/scripts/SimplePag/simplePagination.css"/>
+    <link rel="stylesheet" type="text/css" href="/grow_demo_html/styles/shared_styles.css"/>
+    <link rel="stylesheet" type="text/css" href="/grow_demo_html/styles/general_styles.css"/>
+    <link rel="stylesheet" type="text/css" href="/grow_demo_html/styles/dd_menu_styles.css"/>
+    <link rel="stylesheet" type="text/css" href="/grow_demo_html/styles/form_styles.css"/>
+    <link rel="stylesheet" type="text/css" href="/grow_demo_html/styles/error_styles.css"/>
+    <link rel="stylesheet" type="text/css" href="/grow_demo_html/styles/bootstrap_stolen.css"/>
+    <link rel="stylesheet" type="text/css" href="/grow_demo_html/scripts/SimplePag/simplePagination.css"/>
 
     <!-- External Stylesheets -->
-    <link href="/styles/start/jquery-ui-1.10.3.custom.css" rel="stylesheet"/>
+    <link href="/grow_demo_html/styles/start/jquery-ui-1.10.3.custom.css" rel="stylesheet"/>
     <!--<link href="/styles/start/jquery-ui-1.10.3.custom.min.css" rel="stylesheet"/> -->
-    <link href="/styles/jquery.ui.timepicker.css" rel="stylesheet"/>
+    <link href="/grow_demo_html/styles/jquery.ui.timepicker.css" rel="stylesheet"/>
     
     <!-- Javascripts -->
-    <script type="text/javascript" src="/scripts/jquery/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="/scripts/jquery/jquery-ui-1.10.3.custom.js"></script>
-    <script type="text/javascript" src="/scripts/jquery/jquery-ui-1.10.3.custom.min.js"></script>
-    <script type="text/javascript" src="/scripts/jquery/jquery.ui.timepicker.js"></script>
-    <script type="text/javascript" src="/scripts/errors.js"></script>
-    <script type="text/javascript" src="/scripts/functions.js"></script>
-    <script type="text/javascript" src="/scripts/SimplePag/jquery.simplePagination.js"></script>
+    <script type="text/javascript" src="/grow_demo_html/scripts/jquery/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="/grow_demo_html/scripts/jquery/jquery-ui-1.10.3.custom.js"></script>
+    <script type="text/javascript" src="/grow_demo_html/scripts/jquery/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="/grow_demo_html/scripts/jquery/jquery.ui.timepicker.js"></script>
+    <script type="text/javascript" src="/grow_demo_html/scripts/errors.js"></script>
+    <script type="text/javascript" src="/grow_demo_html/scripts/functions.js"></script>
+    <script type="text/javascript" src="/grow_demo_html/scripts/SimplePag/jquery.simplePagination.js"></script>
     
     <!-- for star rating system -->
     <!--<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet"/> -->
-    <link href="/scripts/bstarating/css/star-rating.css" media="all" rel="stylesheet" type="text/css"/>
-    <script src="/scripts/bstarating/js/star-rating.js" type="text/javascript"></script>
+    <link href="/grow_demo_html/scripts/bstarating/css/star-rating.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="/grow_demo_html/scripts/bstarating/js/star-rating.js" type="text/javascript"></script>
     
 </head>
 <body>

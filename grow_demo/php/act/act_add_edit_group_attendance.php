@@ -74,7 +74,7 @@
 				
 			}
 			
-			$url_no_meeting_reason = '<a class="'.$style_class.'" href="'.$lnk_add_edit_no_meeting_reason.'&id_group='.$GroupID.'&date='.$Date.'"><img style="vertical-align:bottom; outline:none; border: 0;" src="/images/no_meeting.png" width="90" height="27" alt="No Meeting Reason!" /></a>';
+			$url_no_meeting_reason = '<a class="'.$style_class.'" href="'.$lnk_add_edit_no_meeting_reason.'&id_group='.$GroupID.'&date='.$Date.'"><img style="vertical-align:bottom; outline:none; border: 0;" src="/grow_demo_html/images/no_meeting.png" width="90" height="27" alt="No Meeting Reason!" /></a>';
 					
 			$addUrl = $lnk_add_edit_group_attendance.'&id_group='.$GroupID.'&date='.$Date;
 			$urlAddMember = $addUrl.'&add=member';

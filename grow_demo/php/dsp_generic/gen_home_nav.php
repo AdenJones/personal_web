@@ -6,7 +6,7 @@
             <div class="menu">
                 <div id="navigation">
                     <ul class="top-level">
-                    	<li id="main_logo"><a href="<?php echo $lnk_default_page; ?>"><img src="/images/grow_logo.png" width="100" height="30" alt="Home" /></a></li>
+                    	<li id="main_logo"><a href="<?php echo $lnk_default_page; ?>"><img src="/grow_demo_html/images/grow_logo.png" width="100" height="30" alt="Home" /></a></li>
                         <?php
 							
 							//reload the nav pages

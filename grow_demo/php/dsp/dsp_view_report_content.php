@@ -1,7 +1,7 @@
 
            		<div class="generic_form">
                		<div class="form_row">
-                    	<div class="form_major_heading"><h1> <?php echo $page_name ?> - <?php echo $Heading ?></h1></div>
+                    	<div class="form_major_heading"><h1> <?php echo $page_name ?> - <?php echo $Heading ?> - Created: <?php echo funAusDateTimeFormat($Report->GetCreated()); ?></h1></div>
                    	</div>
                     
 					<div class="form_row">

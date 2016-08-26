@@ -2,7 +2,7 @@
     
     <?php $pop_up_container = 'window.mem_sel_popup_container'.$container_id; ?>
     
-		<tr><th>Search Members <img onclick="jsHidePopUp(<?php echo $pop_up_container;?>)" class="float_right generic_close" src="<?php echo BaseExternalURL; ?>/images/white_close.gif"/></th></tr>
+		<tr><th>Search Members <img onclick="jsHidePopUp(<?php echo $pop_up_container;?>)" class="float_right generic_close" src="/images/white_close.gif"/></th></tr>
 		
 <?php
 	

@@ -14,7 +14,8 @@ function funExecPlatformIndependant($command,$returnOutput = false)
 			//pclose(popen("start /B ". $cmd, "r")); 
 		}
 		else {
-			exec($command . " > /dev/null &");  
+			exec($command . " > process.out 2> process.err < /dev/null &"); 
+			
 		} 
 		
 	}
@@ -626,9 +627,6 @@ function funMsgTarget($arrErrors,$arrKey,$strDefault,$strNewTarget)
 /* function for displaying error messages */
 function funDspErrorMsg($arrErrors,$strKey,$strID = '')
 {
-	
-	global $full_uri;
-	
 	//$strID allows me to dynamically insert an id value
 	if( array_key_exists($strKey,$arrErrors) )
 	{
@@ -639,7 +637,7 @@ function funDspErrorMsg($arrErrors,$strKey,$strID = '')
 			$strIDString = "id=\"$strID\"";
 		}
 		
-		echo "<img class=\"form_error_message\" src=\"$full_uri/images/red_question.gif\" title=\"$strKey $arrErrors[$strKey]!\" />\n";
+		echo "<img class=\"form_error_message\" src=\"/images/red_question.gif\" title=\"$strKey $arrErrors[$strKey]!\" />\n";
 		//echo "<p $strIDString class=\"form_error_message\">$strKey $arrErrors[$strKey]!</p>\n"; //old error display
 	}
 }

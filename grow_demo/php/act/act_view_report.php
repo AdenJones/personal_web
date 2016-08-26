@@ -22,6 +22,8 @@
 		$GroupName = $Report->GetReportName();
 		$Dates = $Report->GetReportDates();
 		
+		$ReportTypeHeading = $ReportType.'. Created: '.funAusDateTimeFormat($Report->GetCreated());
+		
 		$Heading = html_entity_decode($ReportType.' : '.$GroupName.' : '.$Dates);
 		
 		$HeadingStripped = preg_replace('/\s+/', '', $Heading);

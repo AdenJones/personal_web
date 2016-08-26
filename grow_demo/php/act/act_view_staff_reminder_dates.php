@@ -77,7 +77,15 @@
 			}elseif($_SESSION['return_to'] == 'view_vol_new' )
 			{
 				$url_return_to_staff = '<a href="'.$lnk_view_vol_new.'&int_vol_hidden_input='.$UserID.'">'.$StaffName.'</a>';
+			}elseif($_SESSION['return_to'] == 'view_staff')
+			{
+				$url_return_to_staff = '<a href="'.$lnk_view_staff_secure.'">'.$StaffName.'</a>';
 			}
+			elseif($_SESSION['return_to'] == 'rem_pol_check')
+			{
+				$url_return_to_staff = '<a href="'.$lnk_reminder_police_checks_due.'">'.$StaffName.'</a>';
+			}
+
 			
 			
 		}

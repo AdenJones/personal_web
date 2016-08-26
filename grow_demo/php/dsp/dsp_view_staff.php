@@ -51,7 +51,7 @@
 												$this_view_regions = '';
 											}
 											
-											$this_reminder_dates = '<div class="form_item spaced"><span class="label">Reminder Dates: </span><a href="'.$lnk_view_staff_reminder_dates.'&id_user='.$this_staff->GetUserID().'">View Reminder Dates</a></div>';
+											$this_reminder_dates = '<div class="form_item spaced"><span class="label">Reminder Dates: </span><a href="'.$lnk_view_staff_reminder_dates.'&id_user='.$this_staff->GetUserID().'&return_to=view_staff'.'">View Reminder Dates</a></div>';
 											
 										}
 										else
@@ -92,7 +92,7 @@
 											$this_url = '<a href="'.$lnk_add_edit_staff.'&id_user='.$this_staff->GetUserID().'">';
                                             $this_url_end = '</a>';
 											$this_view_dates = '<div class="form_item spaced"><a href="'.$lnk_view_staff_volunteer_dates_secure.'&id_user='.$this_staff->GetUserID().'">View All Activity Dates</a></div>';
-											$this_reminder_dates = '<div class="form_item spaced"><span class="label">Reminder Dates: </span><a href="'.$lnk_view_staff_reminder_dates.'&id_user='.$this_staff->GetUserID().'">View Reminder Dates</a></div>';
+											$this_reminder_dates = '<div class="form_item spaced"><span class="label">Reminder Dates: </span><a href="'.$lnk_view_staff_reminder_dates.'&id_user='.$this_staff->GetUserID().'&return_to=view_staff'.'">View Reminder Dates</a></div>';
 											
 										}
 										else
@@ -148,7 +148,7 @@
 												$this_view_regions = '';
 											}
 											
-											$this_reminder_dates = '<div class="form_item spaced"><span class="label">Reminder Dates: </span><a href="'.$lnk_view_staff_reminder_dates.'&id_user='.$this_staff->GetUserID().'">View Reminder Dates</a></div>';
+											$this_reminder_dates = '<div class="form_item spaced"><span class="label">Reminder Dates: </span><a href="'.$lnk_view_staff_reminder_dates.'&id_user='.$this_staff->GetUserID().'&return_to=view_staff'.'">View Reminder Dates</a></div>';
 											if( $this_staff->GetUserTypeName() == $StateUser )
 											{
 												$this_state_activity_dates = '<div class="form_item spaced"><span class="label">State Activity Dates: </span><a href="'.$lnk_view_state_user_states_secure.'&id_user='.$this_staff->GetUserID().'">View State Activity Dates</a></div>';
@@ -205,7 +205,7 @@
 											$this_url = '<a href="'.$lnk_add_edit_staff.'&id_user='.$this_staff->GetUserID().'">';
                                             $this_url_end = '</a>';
 											$this_view_dates = '<div class="form_item spaced"><a href="'.$lnk_view_staff_volunteer_dates_secure.'&id_user='.$this_staff->GetUserID().'">View All Activity Dates</a></div>';
-											$this_reminder_dates = '<div class="form_item spaced"><span class="label">Reminder Dates: </span><a href="'.$lnk_view_staff_reminder_dates.'&id_user='.$this_staff->GetUserID().'">View Reminder Dates</a></div>';
+											$this_reminder_dates = '<div class="form_item spaced"><span class="label">Reminder Dates: </span><a href="'.$lnk_view_staff_reminder_dates.'&id_user='.$this_staff->GetUserID().'&return_to=view_staff'.'">View Reminder Dates</a></div>';
 											
 										}
 										else

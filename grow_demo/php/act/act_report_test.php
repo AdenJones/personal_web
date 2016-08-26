@@ -44,23 +44,29 @@
 			
 			$thisGroup = Business\Group::LoadGroup($GroupID);
 			
-			$Report = $_SESSION['User']->AddReport($page_name.' - '.$thisGroup->GetGroupName().': '.funAusDateFormat($str_safe_s_date).' - '.funAusDateFormat($str_safe_e_date));
+			//$Report = $_SESSION['User']->AddReport($page_name.' - '.$thisGroup->GetGroupName().': '.funAusDateFormat($str_safe_s_date).' - '.funAusDateFormat($str_safe_e_date));
 			
-			$ReportID = $Report->GetIDUserReport();
+			//$ReportID = $Report->GetIDUserReport();
 			
 			
 			//use echo exec to test for bugs in asynchronous scripts (remember it shouldn't be async for testing
 			//echo exec("php ../php/async/test.php argument");
 			
+			//echo exec('cd ../php/async && ls -al');
+			
+			exec('php ../php/async/test.php 2>&1',$output,$return_var);
+			
+			echo $return_var;
+			var_dump($output);
 			
 			//can use echo to grab results, will stop async
 			/* echo */ 
-			$cmd = "php ../php/async/async_group_by_group.php ".$GroupID." ".$StartDate." ".$EndDate." ".$ReportID." ".$_SESSION['User']->GetUserID();
+			//$cmd = "php ../php/async/async_group_by_group.php ".$GroupID." ".$StartDate." ".$EndDate." ".$ReportID." ".$_SESSION['User']->GetUserID();
 			
-			funExecPlatformIndependant($cmd);
-			header( "Location: $lnk_view_my_reports" );
+			//funExecPlatformIndependant($cmd);
+			//header( "Location: $lnk_view_my_reports" );
 			//ensure no further processing is performed
-			exit;
+			//exit;
 			
 		}
 		

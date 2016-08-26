@@ -10,12 +10,13 @@ class PDF extends PDF_MC_Table
 		global $ReportType;
 		global $GroupName;
 		global $Dates;
-			
+		global $ReportTypeHeading;
+		
 		$this->SetFont('Calibri','B',16);
 		$this->SetXY(10,10);
 		$this->Image('images/grow_logo.png',10,10,50);
 		$this->SetXY(10,30);
-		$this->Cell(0,10,$ReportType,0,1,'L');
+		$this->Cell(0,10,$ReportTypeHeading,0,1,'L');
 		$this->Cell(0,10,$GroupName,0,1,'L');
 		$this->Cell(0,10,$Dates,0,1,'L');
 	}

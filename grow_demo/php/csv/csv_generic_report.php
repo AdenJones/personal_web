@@ -1,3 +1,3 @@
 <?php
-	Anonymous\OutputCSVFields::GenericReport($ReportType,$GroupName,$Dates,$HeadingStripped,$ReportFields);
+	Anonymous\OutputCSVFields::GenericReport($ReportType,$ReportTypeHeading,$GroupName,$Dates,$HeadingStripped,$ReportFields);
 ?>

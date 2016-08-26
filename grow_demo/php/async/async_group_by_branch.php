@@ -5,7 +5,7 @@
 	ini_set('display_startup_errors',1);
 	error_reporting(-1);
 
-	$BaseIncludeURL = '../php';
+	$BaseIncludeURL = '../../grow_demo/php';
 	
 	include $BaseIncludeURL.'/spc/spc_db_con.php';
 	include $BaseIncludeURL.'/spc/spc_classes_includer.php'; // class must be called before session start

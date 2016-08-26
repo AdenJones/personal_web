@@ -28,7 +28,7 @@
 														
 								foreach( $StaffDuePoliceChecks as $thisStaff )
 								{
-									$lnk_goto_staff_reminders = '<a class="inline" href="'.$lnk_view_staff_reminder_dates.'&id_user='.$thisStaff->GetUserID().'">Go to Reminders</a>';
+									$lnk_goto_staff_reminders = '<a class="inline" href="'.$lnk_view_staff_reminder_dates.'&id_user='.$thisStaff->GetUserID().'&return_to=rem_pol_check'.'">Go to Reminders</a>';
 									
 									$Reminder = $thisStaff->GetLastPoliceCheck();
 									
@@ -65,7 +65,7 @@
 														
 								foreach( $VolDuePoliceChecks as $thisStaff )
 								{
-									$lnk_goto_staff_reminders = '<a class="inline" href="'.$lnk_view_staff_reminder_dates.'&id_user='.$thisStaff->GetUserID().'">Go to Reminders</a>';
+									$lnk_goto_staff_reminders = '<a class="inline" href="'.$lnk_view_staff_reminder_dates.'&id_user='.$thisStaff->GetUserID().'&return_to=rem_pol_check'.'">Go to Reminders</a>';
 									
 									$Reminder = $thisStaff->GetLastPoliceCheck();
 									

@@ -4594,6 +4594,7 @@ function getGroupRecess($GroupRecessID)
 			
 			$combined_stats = array();
 			
+			
 			for( $i = 0; $i < count($Groups); $i++ )
 			{
 				//$combined_stats[] = array("Name" => $Groups[$i]->GetGroupName(),"MAName" => $MeetingsAttended[$i]['fld_group_name'],"MA" => $MeetingsAttended[$i]['total_meetings']);
@@ -9955,6 +9956,7 @@ function getGroupRecess($GroupRecessID)
 											);
 			}
 			
+						
 			return $combined_stats;
 		}
 		

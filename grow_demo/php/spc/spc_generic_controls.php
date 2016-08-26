@@ -182,8 +182,6 @@ function cntFindGroup($str_group_name,$int_group_hidden_input)
 function cntGroupSelectorImproved($strTitle,$strName,$str_hidden_input,$strDefVal,$str_hidden_input_def,$strErrName,$width = '35',$autoComplete = 'off')
 {
 	global $arrErrors;
-	global $full_uri;
-	
 	
 	$is_error = array_key_exists($strErrName,$arrErrors);
 	
@@ -211,7 +209,7 @@ function cntGroupSelectorImproved($strTitle,$strName,$str_hidden_input,$strDefVa
 	echo '<div '.$call_hover.' '.$call_hide.' id="'.$div_id.'"'.' class="form_item form_member_select">'."\n";
 	echo funCreateTabs(1).'<label for="'.$strName.'">'.$strTitle.'</label>'."\n"; 
 	echo funCreateTabs(1).'<input type="hidden" id="'.$str_hidden_input.'" name="'.$str_hidden_input.'" value="'.$str_hidden_input_def.'" />'."\n";
-	echo funCreateTabs(1).'<input onkeyup="jsSelectGroupPopUpImproved(window.grp_sel_popup_container,'."'".$strName."','".$full_uri."'".')" type="text" size="'.$width.'" autocomplete="'.$autoComplete.'" '.$error_class.' id="'.$strName.'" name="'.$strName.'" value="'.$strDefVal.'" />'."\n";
+	echo funCreateTabs(1).'<input onkeyup="jsSelectGroupPopUpImproved(window.grp_sel_popup_container,'."'".$strName."'".')" type="text" size="'.$width.'" autocomplete="'.$autoComplete.'" '.$error_class.' id="'.$strName.'" name="'.$strName.'" value="'.$strDefVal.'" />'."\n";
 	echo funCreateTabs(1).'Top Records: <select onchange="jsSelectGroupPopUpImproved(window.grp_sel_popup_container,'."'".$strName."'".')" id="record_limit">';
 	echo funCreateTabs(2).'<option value="10">10</option>';
 	echo funCreateTabs(2).'<option value="25">25</option>';
@@ -1572,21 +1570,21 @@ function cntNumber($strTitle,$strName,$strDefVal,$strErrName,$width = '6')
 function cntEditAtt($int_att_id)
 {
 	echo '<div class="parent_confirm_or_cancel float_right">'."\n";
-	echo funCreateTabs(1).'<img src="'.BaseExternalURL.'/images/small_edit.gif" onclick="jsEditAtt('.$int_att_id.')" class="image_right">'."\n";
+	echo funCreateTabs(1).'<img src="/images/small_edit.gif" onclick="jsEditAtt('.$int_att_id.')" class="image_right">'."\n";
 	echo '</div>'."\n";
 }
 
 function cntEditDC($int_dc_id)
 {
 	echo '<div class="parent_confirm_or_cancel float_right">'."\n";
-	echo funCreateTabs(1).'<img src="'.BaseExternalURL.'/images/small_edit.gif" onclick="jsEditDC('.$int_dc_id.')" class="image_right">'."\n";
+	echo funCreateTabs(1).'<img src="/images/small_edit.gif" onclick="jsEditDC('.$int_dc_id.')" class="image_right">'."\n";
 	echo '</div>'."\n";
 }
 
 function cntEditRoomBooking($int_room_booking_id)
 {
 	echo '<div class="parent_confirm_or_cancel float_right">'."\n";
-	echo funCreateTabs(1).'<img src="'.BaseExternalURL.'/images/small_edit.gif" onclick="jsEditRB('.$int_room_booking_id.')" class="image_right">'."\n";
+	echo funCreateTabs(1).'<img src="/images/small_edit.gif" onclick="jsEditRB('.$int_room_booking_id.')" class="image_right">'."\n";
 	echo '</div>'."\n";
 }
 
@@ -1596,7 +1594,7 @@ function cntDeleteGenericImproved($id_string,$jsFunctionName,$id_record_to_del,$
 	
 	
 	echo '<div class="parent_confirm_or_cancel float_right" style="position:relative">'."\n";
-	echo funCreateTabs(1).'<img style="'.$custom_styling.'" src="'.BaseExternalURL.'/images/white_close.gif" onclick="jsShow('."'".$div_id."'".')" class="image_right">'."\n";
+	echo funCreateTabs(1).'<img style="'.$custom_styling.'" src="/images/white_close.gif" onclick="jsShow('."'".$div_id."'".')" class="image_right">'."\n";
 	echo funCreateTabs(1).'<div class="confirm_or_cancel" id="'.$div_id.'">'."\n";
 	echo funCreateTabs(1).'<p>'.$warning_message.'</p>';
 	echo funCreateTabs(2).'<div>'."\n";
@@ -1617,7 +1615,7 @@ function cntDeleteGeneric($id_string,$jsFunctionName,$id_record_to_del)
 	
 	
 	echo '<div class="parent_confirm_or_cancel float_right">'."\n";
-	echo funCreateTabs(1).'<img src="'.BaseExternalURL.'/images/white_close.gif" onclick="jsShow('."'".$div_id."'".')" class="image_right">'."\n";
+	echo funCreateTabs(1).'<img src="/images/white_close.gif" onclick="jsShow('."'".$div_id."'".')" class="image_right">'."\n";
 	echo funCreateTabs(1).'<div class="confirm_or_cancel" id="'.$div_id.'">'."\n";
 	echo funCreateTabs(1).'<p>Are you sure you want to delete this region?</p>';
 	echo funCreateTabs(2).'<div>'."\n";
@@ -1638,7 +1636,7 @@ function cntDeleteGroupRegion($int_group_id,$int_grp_rgn_id)
 	
 	
 	echo '<div class="parent_confirm_or_cancel float_right">'."\n";
-	echo funCreateTabs(1).'<img src="'.BaseExternalURL.'/images/white_close.gif" onclick="jsShow('."'".$div_id."'".')" class="image_right">'."\n";
+	echo funCreateTabs(1).'<img src="/images/white_close.gif" onclick="jsShow('."'".$div_id."'".')" class="image_right">'."\n";
 	echo funCreateTabs(1).'<div class="confirm_or_cancel" id="'.$div_id.'">'."\n";
 	echo funCreateTabs(1).'<p>Are you sure you want to delete this region?</p>';
 	echo funCreateTabs(2).'<div>'."\n";
@@ -1659,7 +1657,7 @@ function cntDeleteRegion($int_rgn_id)
 	
 	
 	echo '<div class="parent_confirm_or_cancel float_right">'."\n";
-	echo funCreateTabs(1).'<img src="'.BaseExternalURL.'/images/white_close.gif" onclick="jsShow('."'".$div_id."'".')" class="image_right">'."\n";
+	echo funCreateTabs(1).'<img src="/images/white_close.gif" onclick="jsShow('."'".$div_id."'".')" class="image_right">'."\n";
 	echo funCreateTabs(1).'<div class="confirm_or_cancel" id="'.$div_id.'">'."\n";
 	echo funCreateTabs(1).'<p>Are you sure you want to delete this region?</p>';
 	echo funCreateTabs(2).'<div>'."\n";
@@ -1680,7 +1678,7 @@ function cntDeleteGroup($int_grp_id,$target_page)
 	
 	
 	echo '<div class="parent_confirm_or_cancel float_right">'."\n";
-	echo funCreateTabs(1).'<img src="'.BaseExternalURL.'/images/white_close.gif" onclick="jsShow('."'".$div_id."'".')" class="image_right">'."\n";
+	echo funCreateTabs(1).'<img src="/images/white_close.gif" onclick="jsShow('."'".$div_id."'".')" class="image_right">'."\n";
 	echo funCreateTabs(1).'<div class="confirm_or_cancel" id="'.$div_id.'">'."\n";
 	echo funCreateTabs(1).'<p>Are you sure you want to delete this group?</p>';
 	echo funCreateTabs(2).'<div>'."\n";
@@ -1701,7 +1699,7 @@ function cntDeleteDC($int_dc_id)
 	
 	
 	echo '<div class="parent_confirm_or_cancel float_right">'."\n";
-	echo funCreateTabs(1).'<img src="'.BaseExternalURL.'/images/white_close.gif" onclick="jsShow('."'".$div_id."'".')" class="image_right">'."\n";
+	echo funCreateTabs(1).'<img src="/images/white_close.gif" onclick="jsShow('."'".$div_id."'".')" class="image_right">'."\n";
 	echo funCreateTabs(1).'<div class="confirm_or_cancel" id="'.$div_id.'">'."\n";
 	echo funCreateTabs(1).'<p>Are you sure you want to delete this daily contact record?</p>';
 	echo funCreateTabs(2).'<div>'."\n";
@@ -1741,7 +1739,7 @@ function cntDeleteMemComDtes($id_user,$id_committed,$int_submitted,$return_to)
 	$div_id = 'delete_MemComDte_'.$id_committed;
 	
 	echo '<div class="parent_confirm_or_cancel float_right">'."\n";
-	echo funCreateTabs(1).'<img src="'.BaseExternalURL.'/images/white_close.gif" onclick="jsShow('."'".$div_id."'".')" class="image_right">'."\n";
+	echo funCreateTabs(1).'<img src="/images/white_close.gif" onclick="jsShow('."'".$div_id."'".')" class="image_right">'."\n";
 	echo funCreateTabs(1).'<div class="confirm_or_cancel" id="'.$div_id.'">'."\n";
 	echo funCreateTabs(2).'<p>Are you sure you want to delete this attendance record?</p>';
 	echo funCreateTabs(1).'<div>'."\n";
@@ -1761,7 +1759,7 @@ function cntDeleteActivityDate($id_activity,$int_submitted,$id_user)
 	$div_id = 'delete_att_'.$id_activity;
 	
 	echo '<div class="parent_confirm_or_cancel float_right">'."\n";
-	echo funCreateTabs(1).'<img src="'.BaseExternalURL.'/images/white_close.gif" onclick="jsShow('."'".$div_id."'".')" class="image_right">'."\n";
+	echo funCreateTabs(1).'<img src="/images/white_close.gif" onclick="jsShow('."'".$div_id."'".')" class="image_right">'."\n";
 	echo funCreateTabs(1).'<div class="confirm_or_cancel" id="'.$div_id.'">'."\n";
 	echo funCreateTabs(2).'<p>Are you sure you want to delete this activity record?</p>';
 	echo funCreateTabs(1).'<div>'."\n";
@@ -1796,7 +1794,7 @@ function cntDeleteAtt($id_attendance,$int_submitted,$id_group,$date)
 	$div_id = 'delete_att_'.$id_attendance;
 	
 	echo '<div class="parent_confirm_or_cancel float_right">'."\n";
-	echo funCreateTabs(1).'<img src="'.BaseExternalURL.'/images/white_close.gif" onclick="jsShow('."'".$div_id."'".')" class="image_right">'."\n";
+	echo funCreateTabs(1).'<img src="/images/white_close.gif" onclick="jsShow('."'".$div_id."'".')" class="image_right">'."\n";
 	echo funCreateTabs(1).'<div class="confirm_or_cancel" id="'.$div_id.'">'."\n";
 	echo funCreateTabs(2).'<p>Are you sure you want to delete this attendance record?</p>';
 	echo funCreateTabs(1).'<div>'."\n";
@@ -1817,7 +1815,7 @@ function cntCancelRoomBooking($id_rm_bk)
 	
 	
 	echo '<div class="parent_confirm_or_cancel float_right">'."\n";
-	echo funCreateTabs(1).'<img src="'.BaseExternalURL.'/images/white_close.gif" onclick="jsShow('."'".$div_id."'".')" class="image_right">'."\n";
+	echo funCreateTabs(1).'<img src="/images/white_close.gif" onclick="jsShow('."'".$div_id."'".')" class="image_right">'."\n";
 	echo funCreateTabs(1).'<div class="confirm_or_cancel" id="'.$div_id.'">'."\n";
 	echo funCreateTabs(1).'<p>Are you sure you want to cancel this room booking?</p>';
 	echo funCreateTabs(2).'<div>'."\n";

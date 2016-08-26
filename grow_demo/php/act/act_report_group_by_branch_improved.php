@@ -76,7 +76,16 @@
 			
 			//include $BaseIncludeURL.'/async/async_group_by_branch.php';;
 			
-			$cmd = "php ../php/async/async_group_by_branch.php ".$Branch." ".$StartDate." ".$EndDate." ".$ReportID." ".$_SESSION['User']->GetUserID();
+			$cmd = "php ../../grow_demo/php/async/async_group_by_branch.php ".$Branch." ".$StartDate." ".$EndDate." ".$ReportID." ".$_SESSION['User']->GetUserID();
+			
+			//echo exec('cd ../../grow_demo/php/async && ls -al');
+			
+			//exec('php ../../grow_demo/php/async/test.php 2>&1',$output,$return_var);
+			
+			//exec($cmd.' 2>&1',$output,$return_var);
+			
+			//echo $return_var;
+			//var_dump($output);
 			
 			funExecPlatformIndependant($cmd);
 			

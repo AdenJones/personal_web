@@ -454,7 +454,7 @@ class User {
 		
 	}
 	
-	public function UpdateUserSafe($UserName,$Password,$ScreenName,$Email = '',$UserTypeID)
+	public function UpdateUserSafe($UserName,$Password,$ScreenName,$Email,$UserTypeID)
 	{
 				
 		$Salt = $this->Salt;
@@ -463,7 +463,7 @@ class User {
 		$this->UserName = $UserName;
 		$this->HashedPassword = $HashedPassword;
 		$this->ScreenName = $ScreenName;
-		$this->EmailAddress = $Email;
+		$this->EmailAddress = $EmailAddress;
 		$this->UserTypeID = $UserTypeID;
 		
 		updUserSafe($this->UserID,$this->UserName,$this->HashedPassword,$this->ScreenName,$this->EmailAddress,$this->UserTypeID);

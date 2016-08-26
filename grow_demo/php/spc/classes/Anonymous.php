@@ -50,7 +50,7 @@ class OutputCSVFields{
 		  exit;
 	}
 	
-	public static function GenericReport($ReportType,$GroupName,$Dates,$filename,$content)
+	public static function GenericReport($ReportType,$ReportTypeHeading,$GroupName,$Dates,$filename,$content)
 	{
 		$Totals = array();
 		$HasTotals = false;
@@ -125,7 +125,7 @@ class OutputCSVFields{
 		
 		$out = fopen("php://output", 'w');
 		
-		fputcsv($out, array($ReportType));
+		fputcsv($out, array($ReportTypeHeading));
 		fputcsv($out, array($GroupName));
 		fputcsv($out, array($Dates));
 		

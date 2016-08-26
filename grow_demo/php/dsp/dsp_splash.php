@@ -3,7 +3,7 @@
             
              <!-- Content -->
             <div id="content">
-            	<img id="grow_log" src="<?php echo BaseExternalURL; ?>/images/grow_logo.png" width="370" height="150" alt="Log In" />           	  <!-- Old form submit <form onsubmit="return fnValSignUp();"> -->
+            	<img id="grow_log" src="/images/grow_logo.png" width="370" height="150" alt="Log In" />           	  <!-- Old form submit <form onsubmit="return fnValSignUp();"> -->
                 <form id="log_in" action="<?php echo "$full_uri/index.php"; ?>" method="post">
                 	<!-- submit page_id for submission to self -->
                 	<input type="hidden" name="page_id" value="splash" />

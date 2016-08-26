@@ -1,8 +1,8 @@
 <?php
 	$arrErrors = array();
 	
-	require($BaseIncludeURL.'/FPDF17/fpdf.php');
-	require($BaseIncludeURL.'/FPDF17/fpdf_mk_table.php');
+	require($BaseIncludeURL.'/FPDF181/fpdf.php');
+	require($BaseIncludeURL.'/FPDF181/fpdf_mk_table.php');
 	
 	$intSubmitted = funRqScpVar('form_submitted','');
 	

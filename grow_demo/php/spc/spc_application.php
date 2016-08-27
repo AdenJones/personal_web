@@ -33,7 +33,6 @@ if(!isset($_SESSION['return_to']))
 	$_SESSION['return_to'] = 'not_set';
 }
 
-
 /*
 	Global boolean values
 	used throughout when setting mysql values to true or false

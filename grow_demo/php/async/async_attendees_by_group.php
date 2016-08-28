@@ -1,36 +1,5 @@
 <?php
-	
-	
-	ini_set('display_errors',1);
-	ini_set('display_startup_errors',1);
-	error_reporting(-1);
-
-	$BaseIncludeURL = '../php';
-	
-	include $BaseIncludeURL.'/spc/spc_db_con.php';
-	include $BaseIncludeURL.'/spc/spc_classes_includer.php'; // class must be called before session start
-	include $BaseIncludeURL.'/spc/spc_functions.php'; //this will probably be removed once object libraries have been created
-	include $BaseIncludeURL.'/spc/spc_query_functions.php'; //this will probably be removed once object libraries have been created
-	include $BaseIncludeURL.'/spc/spc_generic_controls.php';
-
-	date_default_timezone_set('Australia/Brisbane');
-	if (session_id() === "") { session_name('grow_db'); session_start(); } //start the session to use session variables
-	
-	ignore_user_abort(true);
-	set_time_limit(0);
-	
-	define('STATUS_IN_PROCESS', 'In Process');
-	define('STATUS_COMPLETE', 'Complete');
-	define('STATUS_ERROR', 'Error');
-	
-	define('ORGANISER','Organiser');
-	define('RECORDER','Recorder');
-	define('SPONSOR','Sponsor');
-	
-	$StaffVolunteer  = 'staff_volunteer';
-	$MemberString = 'member';
-	define('MEMBER_STRING', 'member');
-	define('STAFF_VOL_STRING', 'staff_volunteer');
+	require_once('async_application.php');
 
 	$arrErrors = array();
 	

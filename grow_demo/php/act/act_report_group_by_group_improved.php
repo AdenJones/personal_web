@@ -52,7 +52,7 @@
 			
 			//can use echo to grab results, will stop async
 			/* echo */ 
-			$cmd = "php ../php/async/async_group_by_group.php ".$GroupID." ".$StartDate." ".$EndDate." ".$ReportID." ".$_SESSION['User']->GetUserID();
+			$cmd = "php ".$BaseIncludeURL."/async/async_group_by_group.php ".$GroupID." ".$StartDate." ".$EndDate." ".$ReportID." ".$_SESSION['User']->GetUserID();
 			
 			funExecPlatformIndependant($cmd);
 			header( "Location: $lnk_view_my_reports" );

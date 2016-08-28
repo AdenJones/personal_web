@@ -49,7 +49,7 @@
 			//include $BaseIncludeURL.'/async/async_group_by_region.php';;
 			
 			
-			$cmd = "php ../php/async/async_group_by_region.php ".$RegionID." ".$StartDate." ".$EndDate." ".$ReportID." ".$_SESSION['User']->GetUserID();
+			$cmd = "php ".$BaseIncludeURL."/async/async_group_by_region.php ".$RegionID." ".$StartDate." ".$EndDate." ".$ReportID." ".$_SESSION['User']->GetUserID();
 			
 			funExecPlatformIndependant($cmd);
 			

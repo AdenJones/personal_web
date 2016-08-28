@@ -131,7 +131,7 @@
 				
 				//include '../php/async/async_attendances_by_group.php';
 				
-				$cmd = "php ../php/async/async_attendances_by_group.php ".$GroupID." ".$StartDate." ".$EndDate." ".$ReportID." ".$_SESSION['User']->GetUserID();
+				$cmd = "php ".$BaseIncludeURL."/async/async_attendances_by_group.php ".$GroupID." ".$StartDate." ".$EndDate." ".$ReportID." ".$_SESSION['User']->GetUserID();
 				
 				funExecPlatformIndependant($cmd);
 				header( "Location: $lnk_view_my_reports" );
@@ -150,7 +150,7 @@
 				
 				//include '../php/async/async_attendances_by_region.php';
 				
-				$cmd = "php ../php/async/async_attendances_by_region.php ".$RegionID." ".$StartDate." ".$EndDate." ".$ReportID." ".$_SESSION['User']->GetUserID();
+				$cmd = "php ".$BaseIncludeURL."/async/async_attendances_by_region.php ".$RegionID." ".$StartDate." ".$EndDate." ".$ReportID." ".$_SESSION['User']->GetUserID();
 				
 				funExecPlatformIndependant($cmd);
 				header( "Location: $lnk_view_my_reports" );
@@ -169,7 +169,7 @@
 				
 				//include '../php/async/async_attendances_by_branch.php';
 				
-				$cmd = "php ../php/async/async_attendances_by_branch.php ".$Branch." ".$StartDate." ".$EndDate." ".$ReportID." ".$_SESSION['User']->GetUserID();
+				$cmd = "php ".$BaseIncludeURL."/async/async_attendances_by_branch.php ".$Branch." ".$StartDate." ".$EndDate." ".$ReportID." ".$_SESSION['User']->GetUserID();
 				
 				funExecPlatformIndependant($cmd);
 				header( "Location: $lnk_view_my_reports" );

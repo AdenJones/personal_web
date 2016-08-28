@@ -82,16 +82,16 @@
 			
 			//exec('php ../../grow_demo/php/async/test.php 2>&1',$output,$return_var);
 			
-			exec($cmd.' 2>&1',$output,$return_var);
+			//exec($cmd.' 2>&1',$output,$return_var);
 			
-			echo $return_var;
-			var_dump($output);
+			//echo $return_var;
+			//var_dump($output);
 			
-			//funExecPlatformIndependant($cmd);
+			funExecPlatformIndependant($cmd);
 			
-			//header( "Location: $lnk_view_my_reports" );
+			header( "Location: $lnk_view_my_reports" );
 			//ensure no further processing is performed
-			//exit;
+			exit;
 			
 		}
 		

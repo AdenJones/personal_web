@@ -65,7 +65,7 @@
 			//include $BaseIncludeURL.'/async/async_trend_by_branch.php';;
 			
 			
-			$cmd = "php ../php/async/async_trend_by_branch.php ".$Branch." ".$StartDate." ".$EndDate." ".$ReportID." ".$_SESSION['User']->GetUserID();
+			$cmd = "php ".$BaseIncludeURL."/async/async_trend_by_branch.php ".$Branch." ".$StartDate." ".$EndDate." ".$ReportID." ".$_SESSION['User']->GetUserID();
 			
 			funExecPlatformIndependant($cmd);
 			

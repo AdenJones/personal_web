@@ -30,6 +30,8 @@ Route::get('/contact', function() {
    return view('contact');
 });
 
+Route::get('/project/{project}', ['uses' => 'ProjectController@show' ]);
+
 Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleWare'], function()
 {
     

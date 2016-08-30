@@ -145,6 +145,12 @@ div.main-content
 @media screen and (max-width: 560px)
 {
    h1 { font-size: 20px }
+   
+   .slider_floating_info .slider_container
+   {
+      padding: 10px;
+   }
+
 }
 
 

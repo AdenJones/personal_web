@@ -3,6 +3,7 @@
 body
 {
    background-color: #acb5ed;
+   color: #777;
    
 }
 
@@ -25,7 +26,8 @@ div.container > h1 a:active
 }
 
 nav.navbar.navbar-default,
-div.container > h1 a
+div.container > h1 a,
+div.main-content
 {
  
    background: white url('/images/beautiful_brisbane_grey.jpg') center no-repeat fixed;
@@ -51,6 +53,94 @@ body, h1
 {
    width: 1200px;
 }
+/********  Global Styles *********/
+
+a { color: #5085b7 }
+
+/* override margin
+top for page headings
+*/
+
+a:hover
+{
+   text-decoration: none;
+}
+
+h2:first-child
+{
+   margin-top: 0px;
+}
+/* this is the main 
+block container for 
+content */
+
+div.main-content
+{
+   width:100%;
+   padding: 20px;
+}
+
+
+/********  Nav Styles *********/
+
+.bx-wrapper
+{
+   border-top-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+}
+
+.nav_container .navbar,
+div.main-content
+{
+   border-top-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+   border-top-right-radius: 0px !important;
+   border-bottom-left-radius: 0px !important;
+}
+
+/********  Slider Styles *********/
+
+.slider_floating_info
+{
+   position: absolute;
+   top: 0px;
+   margin: 0 auto;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+}
+
+.slider_floating_info .slider_container h1
+{
+   
+   text-align: center;
+   
+  
+}
+
+.slider_floating_info .slider_container
+{
+   
+   text-align: center;
+   border: 10px solid white;
+   padding: 50px;
+   background-color: #acb5ed;
+   border-top-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+   opacity: 0.9;
+}
+
+.slider_floating_info .slider_outer
+{
+   border: 1px solid #c8c8c8;
+   
+   border-top-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+}
+
 
 @media screen and (max-width: 560px)
 {

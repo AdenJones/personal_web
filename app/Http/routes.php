@@ -26,6 +26,9 @@ Route::get('/', function () {
     return view('splash', ['projects' => $projects]);
 });
 
+Route::get('/contact', function() {
+   return view('contact');
+});
 
 Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleWare'], function()
 {

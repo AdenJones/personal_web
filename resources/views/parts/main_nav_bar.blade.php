@@ -7,6 +7,13 @@
       <source srcset="{{url('/')}}/images/{{$project->slider_image}}" media="(min-width: 560px)">
       <img src="{{url('/')}}/images/{{$project->slider_image_small}}" alt="{{$project->name}}">
       </picture>
+      <div class="slider_floating_info">
+         <div class="slider_outer">
+            <div class="slider_container">
+               <h1>{{$project->name}}</h1>
+            </div>
+         </div>
+      </div>
    </li>
    @endforeach
   

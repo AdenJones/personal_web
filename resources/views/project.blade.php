@@ -9,7 +9,10 @@
 
    <div class="inner-block">{!! $project->description !!}</div>
    
-   <img src="{{url('/')}}/images/{{$project->slider_image}}" alt="{{ $project->name }}" />
+   <picture class="variable-width">
+      <source srcset="{{url('/')}}/images/{{$project->slider_image}}" media="(min-width: 560px)">
+      <img src="{{url('/')}}/images/{{$project->slider_image_small}}" alt="{{$project->name}}">
+    </picture>
    
    <p><a target="_new" href="{{$project->url}}">View the project</a></p>
 </div>

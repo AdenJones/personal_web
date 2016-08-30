@@ -141,6 +141,13 @@ div.main-content
    border-bottom-right-radius: 20px;
 }
 
+picture.variable-width src,
+picture.variable-width img
+{
+   max-width: 100%;
+   height: auto;
+}
+
 
 @media screen and (max-width: 560px)
 {

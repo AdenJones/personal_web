@@ -25,7 +25,8 @@ $(document).ready(function(){
    auto: true,
    autoStart: true,
    autoDelay: 1000,
-   adaptiveHeight: true
+   adaptiveHeight: true,
+   mode: 'fade'
   });
 });
 </script>

@@ -42,6 +42,7 @@ class ProjectController extends Controller
 	     'description' => 'required|max:65000',
 	     'url' => 'required|max:255',
         'slider_image' => 'required|mimes:jpeg,jpg,bmp,png,gif|max:200000',
+        'slider_image_small' => 'required|mimes:jpeg,jpg,bmp,png,gif|max:200000',
           ]);
 
           if ($validator->fails()) {
@@ -56,9 +57,13 @@ class ProjectController extends Controller
           $project->url = $request->url;
           
           $unique_filename = Helpers::makeUniqueName(Input::file('slider_image'),public_path().'/images/');
+          $unique_filename_small = Helpers::makeUniqueName(Input::file('slider_image_small'),public_path().'/images/');
           
           $project->slider_image = $unique_filename;
+          $project->slider_image_small = $unique_filename_small;
+          
           Input::file('slider_image')->move(public_path().'/images/',$unique_filename);
+          Input::file('slider_image_small')->move(public_path().'/images/',$unique_filename_small);
           
           $project->save();
 
